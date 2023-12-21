@@ -6,6 +6,8 @@ from babel.numbers import format_currency
 from PIL import Image
 sns.set(style='dark')
 
+
+
 # Membuat df monthly_orders_df
 def create_monthly_orders_df(df):
     monthly_orders_df = df.resample(rule='M', on='order_delivered_customer_date').agg({ #rule = M(Monthly), on = pada kolom
