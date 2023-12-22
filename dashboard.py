@@ -3,7 +3,6 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import streamlit as st
 from babel.numbers import format_currency
-from PIL import Image
 sns.set(style='dark')
 
 
@@ -68,19 +67,17 @@ max_date = all_df["order_delivered_customer_date"].max()
  
 
 # Membuat layout
-# Page icon
-icon = Image.open("https://github.com/sabrinalaillita/E-CommerceDicoding/blob/main/download__4_-removebg-preview.png")
 
 # Page config
 st.set_page_config(page_title="Sabrina E-Commerce Dashboard",
-                   page_icon=icon,
+                   page_icon="https://github.com/sabrinalaillita/E-CommerceDicoding/blob/main/download__4_-removebg-preview.png?raw=true",
                    layout="wide",
                    initial_sidebar_state="expanded"
                    )
 
 with st.sidebar: # Menggunakan sidebar
     # Menambahkan logo perusahaan
-    st.image("https://github.com/sabrinalaillita/E-CommerceDicoding/blob/main/download__4_-removebg-preview.png")
+    st.image("https://github.com/sabrinalaillita/E-CommerceDicoding/blob/main/download__4_-removebg-preview.png?raw=true")
     
     # Mengambil start_date & end_date dari date_input
     start_date, end_date = st.date_input(
