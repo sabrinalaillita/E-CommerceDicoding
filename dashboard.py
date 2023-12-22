@@ -53,7 +53,7 @@ def create_rfm_df(df):
     return rfm_df
 
 # Load berkas all data
-all_df = pd.read_csv("all_data.csv")
+all_df = pd.read_csv("https://raw.githubusercontent.com/sabrinalaillita/E-CommerceDicoding/main/all_data.csv")
 
 # Mengubah Tipe Data Menjadi Datetime
 datetime_columns = ["order_purchase_timestamp", "order_approved_at", "order_delivered_carrier_date", "order_delivered_customer_date", "order_estimated_delivery_date"]
@@ -69,7 +69,7 @@ max_date = all_df["order_delivered_customer_date"].max()
 
 # Membuat layout
 # Page icon
-icon = Image.open('download__4_-removebg-preview.png')
+icon = Image.open("https://github.com/sabrinalaillita/E-CommerceDicoding/blob/main/download__4_-removebg-preview.png")
 
 # Page config
 st.set_page_config(page_title="Sabrina E-Commerce Dashboard",
@@ -80,7 +80,7 @@ st.set_page_config(page_title="Sabrina E-Commerce Dashboard",
 
 with st.sidebar: # Menggunakan sidebar
     # Menambahkan logo perusahaan
-    st.image("download__4_-removebg-preview.png")
+    st.image("https://github.com/sabrinalaillita/E-CommerceDicoding/blob/main/download__4_-removebg-preview.png")
     
     # Mengambil start_date & end_date dari date_input
     start_date, end_date = st.date_input(
